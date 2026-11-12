@@ -29,8 +29,9 @@ python main.py
 누구나 한 번쯤 공부하는 친숙한 주제라 퀴즈로 만들기
 적합하다고 생각해 선택했습니다.
 
-```
 ## 📂 파일 구조
+
+```
 quiz-game/
 ├── main.py       # 게임 실행 및 핵심 로직 (Quiz, QuizGame 클래스)
 ├── README.md     # 프로젝트 설명 문서
