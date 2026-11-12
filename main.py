@@ -66,13 +66,26 @@ class QuizGame:
         for q in data["quizzes"]:
             self.quizzes.append(Quiz(q["question"], q["choices"], q["answer"]))
         print("저장된 데이터를 불러왔어요!")
+ 
+    def add_quiz(self):
+        print("\n===== 퀴즈 추가 =====")
+        question = input("질문을 입력하세요: ").strip()
+        choices = []                             
+        for i in range(1, 5):                    
+            choice = input(f"{i}번 선택지: ").strip()  
+            choices.append(choice)                
+        answer = input("정답 번호(1~4): ").strip()
+        new_quiz = Quiz(question, choices, answer)
+        self.quizzes.append(new_quiz)
+        print("퀴즈가 추가되었어요!")   
 
     def show_menu(self):
         while True:
             print("\n===== 수도 퀴즈 게임 =====")
             print("1. 게임 시작")
             print("2. 최고 점수 보기")
-            print("3. 종료")
+            print("3. 퀴즈 추가")
+            print("4. 종료")
 
             choice = input("선택: ").strip()
 
@@ -81,10 +94,12 @@ class QuizGame:
             elif choice == "2":
                 print(f"🏆 최고 점수는 {self.best_score}점이에요!")
             elif choice == "3":
+                self.add_quiz()    
+            elif choice == "4":
                 print("게임을 종료합니다. 안녕히 가세요! 👋")
                 break
             else:
-                print("1~3 사이로 입력해주세요! 😊")
+                print("1~4 사이로 입력해주세요! 😊")
 
 
 game = QuizGame()
