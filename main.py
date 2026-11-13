@@ -80,17 +80,19 @@ class QuizGame:
                 "choices": quiz.choices,
                 "answer": quiz.answer
             })
-            # 💾 기존 파일이 있으면 .bak으로 백업!
-            if os.path.exists("state.json"):
-                try:
-                    shutil.copy("state.json", "state.json.bak")
-                except OSError:
-                    print("⚠️ 백업 파일 생성에 실패했어요. (백업 건너뜀)")
+
+        # 💾 기존 파일이 있으면 .bak으로 백업! (for문 밖, 저장 전 1번만)
+        if os.path.exists("state.json"):
+            try:
+                shutil.copy("state.json", "state.json.bak")
+            except OSError:
+                print("⚠️ 백업 파일 생성에 실패했어요. (백업 건너뜀)")
+
         try:
             with open("state.json", "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
         except OSError:
-            print("⚠️ 저장 중 문제가 발생했어요. (저장 실패)")
+            print("⚠️ 저장 중 문제가 발생했어요. (저장 실패)") 
 
     def load_state(self):
         if not os.path.exists("state.json"):  # 파일이 없는 경우
