@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 
 
 def input_number(prompt, min_value, max_value):
@@ -79,6 +80,12 @@ class QuizGame:
                 "choices": quiz.choices,
                 "answer": quiz.answer
             })
+            # 💾 기존 파일이 있으면 .bak으로 백업!
+            if os.path.exists("state.json"):
+                try:
+                    shutil.copy("state.json", "state.json.bak")
+                except OSError:
+                    print("⚠️ 백업 파일 생성에 실패했어요. (백업 건너뜀)")
         try:
             with open("state.json", "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
