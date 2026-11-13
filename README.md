@@ -43,6 +43,28 @@ quiz-game/
 - UTF-8 인코딩으로 저장되어 한글이 깨지지 않습니다.
 - 프로그램을 종료 후 다시 실행해도 데이터가 유지됩니다.
 
-## 📸 실행 화면
+## 🎬 실행 화면
 
-![실행 화면](images/git_clone.png)
+### 게임 실행
+![게임 실행](images/play.png)
+
+### 퀴즈 목록
+![퀴즈 목록](images/list.png)
+
+### 최고 점수 보기
+![최고 점수](images/bestscore.png)
+
+### 게임 점수 결과
+![점수 결과](images/playscore.png)
+
+## 🧰 Git 작업 증빙
+
+### clone / pull
+![git clone](images/git_clone.png)
+![git clone2](images/git_clone2.png)
+
+### 커밋 로그
+![커밋 로그](images/git_log.png)
+
+### 브랜치 / 병합 그래프
+![브랜치 그래프](images/git_graph.png)
