@@ -147,10 +147,11 @@ signal.signal(signal.SIGTERM, _handle_sigterm)
 
 ## 📜 커밋 로그 (#5)
 
-총 10개 이상의 의미있는 커밋으로 작업했습니다.
+총 24개의 의미있는 커밋으로 작업했습니다.
 
 ```
-4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
+3fff69d docs: 커밋로그·단위규정·JSON이유·변경영향 보완
+4146427 docs: 시그널 처리·백업·성능 문서 추가
 653b86e Refactor backup logic for state.json
 af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
 9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
@@ -168,55 +169,7 @@ dede4bf README에 주제 선정 이유, 파일 구조, 데이터 설명 추가
 ee63402 Merge branch 'main' of https://github.com/seouloc-art/quiz-game
 fe8fd39 입력 예외처리 및 퀴즈 목록 기능 추가
 9b047d6 Merge pull request #1 from seouloc-art/feature/add-quiz
-d190e69 (origin/feature/add-quiz) 퀴즈 추가 기능 구현 완료
-:
-4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
-653b86e Refactor backup logic for state.json
-af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
-9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
-3b04261 문서 추가: 클래스 설명
-07a4664 Add class descriptions and commit guidelines to README
-97ee05b Add files via upload
-be41b80 Revise README with new section headers and images
-6fc15c1 docs: 실행 스크린샷 6장 추가
-378ee59 Fix formatting in README.md file structure section
-c224517 Update README with file structure and data file info
-4336c1e Update README with execution screen details
-c52919b docs: 실행 스크린샷 추가
-dede4bf README에 주제 선정 이유, 파일 구조, 데이터 설명 추가
-:
-4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
-653b86e Refactor backup logic for state.json
-af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
-9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
-3b04261 문서 추가: 클래스 설명
-07a4664 Add class descriptions and commit guidelines to README
-97ee05b Add files via upload
-be41b80 Revise README with new section headers and images
-6fc15c1 docs: 실행 스크린샷 6장 추가
-378ee59 Fix formatting in README.md file structure section
-c224517 Update README with file structure and data file info
-4336c1e Update README with execution screen details
-:
-4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
-653b86e Refactor backup logic for state.json
-af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
-9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
-3b04261 문서 추가: 클래스 설명
-07a4664 Add class descriptions and commit guidelines to README
-97ee05b Add files via upload
-be41b80 Revise README with new section headers and images
-6fc15c1 docs: 실행 스크린샷 6장 추가
-378ee59 Fix formatting in README.md file structure section
-c224517 Update README with file structure and data file info
-4336c1e Update README with execution screen details
-c52919b docs: 실행 스크린샷 추가
-dede4bf README에 주제 선정 이유, 파일 구조, 데이터 설명 추가
-4362cb1 README 기능 설명 보강
-ee63402 Merge branch 'main' of https://github.com/seouloc-art/quiz-game
-fe8fd39 입력 예외처리 및 퀴즈 목록 기능 추가
-9b047d6 Merge pull request #1 from seouloc-art/feature/add-quiz
-d190e69 (origin/feature/add-quiz) 퀴즈 추가 기능 구현 완료
+d190e69 퀴즈 추가 기능 구현 완료
 6e41012 퀴즈 게임 점수 저장 기능 완성
 1722844 메뉴 시스템 완성 및 반복 실행 구현
 f653ef4 Update README with execution command
