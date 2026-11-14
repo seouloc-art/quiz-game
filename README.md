@@ -107,3 +107,30 @@ quiz-game/
 ## 📊 변경 영향도
 - Quiz 를 고치면 → 문제 저장/불러오기에 영향
 - QuizGame 을 고치면 → 게임 진행에 영향
+
+## ⚙️ 종료·시그널 처리 (#11)
+
+- Ctrl+C(KeyboardInterrupt)나 EOF 입력 시에도 save_state()로 안전하게 저장돼요.
+- SIGTERM 같은 강제 종료까지 저장하려면 signal 모듈을 쓸 수 있어요 (예시):
+
+```python
+import signal
+def _handle_sigterm(signum, frame):
+    game.save_state()
+    raise SystemExit(0)
+signal.signal(signal.SIGTERM, _handle_sigterm)
+```
+> Windows는 SIGTERM 지원이 제한적이라, 기본은 Ctrl+C 처리를 사용해요.
+
+## 💾 백업·복원 (#17)
+
+- **자동 백업:** save_state() 저장 전에 기존 state.json을 state.json.bak으로 복사해요.
+- **자동 복구:** 파일이 깨지면 load_state()가 기본 퀴즈로 복원해요.
+- **수동 복원:** `copy state.json.bak state.json` (Windows) 로 되돌려요.
+
+## 📊 대량 데이터 성능 (#16)
+
+- 퀴즈 1000개 이상이면 JSON 전체를 읽고 쓰므로 I/O·메모리가 선형 증가해요.
+- 목록 검색은 리스트라서 O(n)이에요.
+- **개선 방안:** 목록 페이징(20개씩), 딕셔너리 인덱스, 대용량 시 SQLite 전환 검토.
+
