@@ -99,6 +99,17 @@ quiz-game/
 ## 📌 커밋 규칙
 - "기능 추가: 퀴즈 저장 기능" 처럼
   [무엇을 했는지] 를 짧게 적습니다.
+  
+  **커밋 단위 규정:**
+- **한 기능/버그당 1커밋** (작게 자주 커밋)
+- 여러 변경을 한 번에 몰아서 커밋하지 않음
+
+**메시지 템플릿:** `<타입>: <요약>`
+| 타입 | 의미 | 예시 |
+|------|------|------|
+| feat | 새 기능 | feat: 자동 백업 추가 |
+| fix | 버그 수정 | fix: 들여쓰기 오류 수정 |
+| docs | 문서 수정 | docs: README 보완 |
 
 ## 💡 클래스를 쓴 이유
 - 문제 정보를 Quiz 상자에 깔끔하게 모을 수 있어요.
@@ -133,4 +144,101 @@ signal.signal(signal.SIGTERM, _handle_sigterm)
 - 퀴즈 1000개 이상이면 JSON 전체를 읽고 쓰므로 I/O·메모리가 선형 증가해요.
 - 목록 검색은 리스트라서 O(n)이에요.
 - **개선 방안:** 목록 페이징(20개씩), 딕셔너리 인덱스, 대용량 시 SQLite 전환 검토.
+
+## 📜 커밋 로그 (#5)
+
+총 10개 이상의 의미있는 커밋으로 작업했습니다.
+
+```
+4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
+653b86e Refactor backup logic for state.json
+af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
+9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
+3b04261 문서 추가: 클래스 설명
+07a4664 Add class descriptions and commit guidelines to README
+97ee05b Add files via upload
+be41b80 Revise README with new section headers and images
+6fc15c1 docs: 실행 스크린샷 6장 추가
+378ee59 Fix formatting in README.md file structure section
+c224517 Update README with file structure and data file info
+4336c1e Update README with execution screen details
+c52919b docs: 실행 스크린샷 추가
+dede4bf README에 주제 선정 이유, 파일 구조, 데이터 설명 추가
+4362cb1 README 기능 설명 보강
+ee63402 Merge branch 'main' of https://github.com/seouloc-art/quiz-game
+fe8fd39 입력 예외처리 및 퀴즈 목록 기능 추가
+9b047d6 Merge pull request #1 from seouloc-art/feature/add-quiz
+d190e69 (origin/feature/add-quiz) 퀴즈 추가 기능 구현 완료
+:
+4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
+653b86e Refactor backup logic for state.json
+af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
+9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
+3b04261 문서 추가: 클래스 설명
+07a4664 Add class descriptions and commit guidelines to README
+97ee05b Add files via upload
+be41b80 Revise README with new section headers and images
+6fc15c1 docs: 실행 스크린샷 6장 추가
+378ee59 Fix formatting in README.md file structure section
+c224517 Update README with file structure and data file info
+4336c1e Update README with execution screen details
+c52919b docs: 실행 스크린샷 추가
+dede4bf README에 주제 선정 이유, 파일 구조, 데이터 설명 추가
+:
+4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
+653b86e Refactor backup logic for state.json
+af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
+9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
+3b04261 문서 추가: 클래스 설명
+07a4664 Add class descriptions and commit guidelines to README
+97ee05b Add files via upload
+be41b80 Revise README with new section headers and images
+6fc15c1 docs: 실행 스크린샷 6장 추가
+378ee59 Fix formatting in README.md file structure section
+c224517 Update README with file structure and data file info
+4336c1e Update README with execution screen details
+:
+4146427 (HEAD -> main, origin/main, origin/HEAD) docs: 시그널 처리·백업·성능 문서 추가
+653b86e Refactor backup logic for state.json
+af73569 feat: 저장 시 state.json 자동 백업 기능 추가 (#3)
+9aa871e Merge branch 'main' of https://github.com/seouloc-art/quiz-game
+3b04261 문서 추가: 클래스 설명
+07a4664 Add class descriptions and commit guidelines to README
+97ee05b Add files via upload
+be41b80 Revise README with new section headers and images
+6fc15c1 docs: 실행 스크린샷 6장 추가
+378ee59 Fix formatting in README.md file structure section
+c224517 Update README with file structure and data file info
+4336c1e Update README with execution screen details
+c52919b docs: 실행 스크린샷 추가
+dede4bf README에 주제 선정 이유, 파일 구조, 데이터 설명 추가
+4362cb1 README 기능 설명 보강
+ee63402 Merge branch 'main' of https://github.com/seouloc-art/quiz-game
+fe8fd39 입력 예외처리 및 퀴즈 목록 기능 추가
+9b047d6 Merge pull request #1 from seouloc-art/feature/add-quiz
+d190e69 (origin/feature/add-quiz) 퀴즈 추가 기능 구현 완료
+6e41012 퀴즈 게임 점수 저장 기능 완성
+1722844 메뉴 시스템 완성 및 반복 실행 구현
+f653ef4 Update README with execution command
+0eace80 Add README for country/capital quiz game
+ebb7dd9 나라/수도 퀴즈 게임 완성
+```
+
+## 💡 JSON을 선택한 이유 (#14)
+
+- **가독성:** 사람이 열어봐도 내용을 바로 이해할 수 있어요.
+- **구조화:** 중첩 구조(퀴즈 목록, 점수)를 자연스럽게 표현해요.
+- **파이썬 친화:** json 모듈로 dict ↔ 파일 변환이 간단해요.
+- **별도 DB 불필요:** 소규모 데이터라 파일 하나로 충분해요.
+
+## 📈 변경 영향도 (#18)
+
+요구 변경 시 수정해야 할 **구체적 대상:**
+
+| 변경 요구 | 수정할 메서드/위치 |
+|----------|------------------|
+| 점수 계산 방식 변경 | `QuizGame.play()` 내 점수 증가 부분 |
+| 퀴즈 데이터 구조 변경 | `Quiz.__init__`, `save_state()`, `load_state()` |
+| 저장 방식 변경(JSON→DB) | `save_state()`, `load_state()` |
+| 기본 퀴즈 변경 | `setup_quizzes()` |
 
